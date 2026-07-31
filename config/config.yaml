@@ -1,0 +1,41 @@
+# Filesystem paths used throughout the pipeline; centralized here so nothing
+# hardcodes a path directly in code.
+paths:
+  raw_dir: data/raw
+  rejected_dir: data/rejected
+  warehouse_file: data/processed/mortgage.duckdb
+  reports_dir: reports
+
+ingestion:
+  # Each source system is configured independently since they arrive in
+  # different formats and may evolve on separate schedules.
+  sources:
+    - name: core_los
+      format: csv
+      pattern: "mortgage_applications_core*.csv"
+    - name: broker_portal
+      format: json
+      pattern: "mortgage_applications_broker*.json"
+
+  # A record missing any of these columns is rejected rather than partially loaded.
+  required_columns:
+    - application_id
+    - application_date
+    - applicant_id
+    - applicant_income
+    - loan_amount
+    - property_value
+    - loan_type
+    - interest_rate
+    - loan_term_months
+    - debt_to_income_ratio
+    - loan_to_value_ratio
+    - property_state
+    - property_county
+    - lender
+    - application_status
+    - denial_reason
+    - credit_score_range
+    - data_source_system
+    - created_timestamp
+    - updated_timestamp

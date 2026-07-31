@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# OS
+.DS_Store
+
+# Environment / secrets
+.env
+
+# Generated data (large, reproducible via scripts/generate_data.py)
+data/raw/*.csv
+data/raw/*.json
+data/rejected/*.csv
+data/processed/*.duckdb
+
+# But keep the small samples
+!data/samples/
+!data/samples/*.csv
+!data/samples/*.json
