@@ -1,14 +1,11 @@
-# Filesystem paths used throughout the pipeline; centralized here so nothing
-# hardcodes a path directly in code.
 paths:
   raw_dir: data/raw
+  processed_dir: data/processed
   rejected_dir: data/rejected
-  warehouse_file: data/processed/mortgage.duckdb
   reports_dir: reports
+  warehouse_file: data/processed/mortgage.duckdb
 
 ingestion:
-  # Each source system is configured independently since they arrive in
-  # different formats and may evolve on separate schedules.
   sources:
     - name: core_los
       format: csv
@@ -16,8 +13,6 @@ ingestion:
     - name: broker_portal
       format: json
       pattern: "mortgage_applications_broker*.json"
-
-  # A record missing any of these columns is rejected rather than partially loaded.
   required_columns:
     - application_id
     - application_date
@@ -39,3 +34,55 @@ ingestion:
     - data_source_system
     - created_timestamp
     - updated_timestamp
+
+data_quality:
+  valid_application_statuses:
+    - Approved
+    - Denied
+    - Withdrawn
+    - Incomplete
+  min_application_date: "2018-01-01"
+  max_future_days: 1
+  min_income: 1000
+  max_income: 5000000
+  min_loan_amount: 1000
+  max_loan_amount: 5000000
+  min_property_value: 1000
+  max_property_value: 10000000
+  min_dti: 0.0
+  max_dti: 1.0
+  min_ltv: 0.0
+  max_ltv: 2.0
+  min_interest_rate: 0.5
+  max_interest_rate: 20.0
+  high_risk_dti_threshold: 0.43
+  high_risk_ltv_threshold: 0.95
+  high_risk_credit_scores:
+    - "<580"
+    - "580-619"
+
+bands:
+  income:
+    - [0, 50000, "<50K"]
+    - [50000, 100000, "50K-100K"]
+    - [100000, 150000, "100K-150K"]
+    - [150000, 250000, "150K-250K"]
+    - [250000, null, "250K+"]
+  loan_amount:
+    - [0, 100000, "<100K"]
+    - [100000, 250000, "100K-250K"]
+    - [250000, 500000, "250K-500K"]
+    - [500000, 1000000, "500K-1M"]
+    - [1000000, null, "1M+"]
+  dti:
+    - [0, 0.20, "<20%"]
+    - [0.20, 0.30, "20-30%"]
+    - [0.30, 0.36, "30-36%"]
+    - [0.36, 0.43, "36-43%"]
+    - [0.43, null, "43%+"]
+  ltv:
+    - [0, 0.60, "<60%"]
+    - [0.60, 0.80, "60-80%"]
+    - [0.80, 0.90, "80-90%"]
+    - [0.90, 0.95, "90-95%"]
+    - [0.95, null, "95%+"]
