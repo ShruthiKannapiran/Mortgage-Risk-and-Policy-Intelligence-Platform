@@ -1,0 +1,58 @@
+{
+  "generated_at": "2026-08-04T21:02:06.770784+00:00",
+  "overall_status": "PASS",
+  "checks_passed": 10,
+  "checks_total": 10,
+  "checks": [
+    {
+      "name": "required_columns_present",
+      "passed": true,
+      "details": "all required columns present"
+    },
+    {
+      "name": "no_nulls_in_required_columns",
+      "passed": true,
+      "details": "no nulls found"
+    },
+    {
+      "name": "no_duplicate_application_ids",
+      "passed": true,
+      "details": "no duplicates"
+    },
+    {
+      "name": "valid_date_ranges",
+      "passed": true,
+      "details": "all dates in range"
+    },
+    {
+      "name": "accepted_status_values",
+      "passed": true,
+      "details": "all statuses valid"
+    },
+    {
+      "name": "positive_loan_and_income_values",
+      "passed": true,
+      "details": "all positive"
+    },
+    {
+      "name": "dti_ltv_within_range",
+      "passed": true,
+      "details": "all within range"
+    },
+    {
+      "name": "referential_integrity",
+      "passed": true,
+      "details": "all foreign keys resolve"
+    },
+    {
+      "name": "source_to_target_row_reconciliation",
+      "passed": true,
+      "details": "silver=238952, fact=238952 (match)"
+    },
+    {
+      "name": "rejected_record_rate_within_threshold",
+      "passed": true,
+      "details": "rejected 11356/253794 (4.47%), threshold 15%"
+    }
+  ]
+}

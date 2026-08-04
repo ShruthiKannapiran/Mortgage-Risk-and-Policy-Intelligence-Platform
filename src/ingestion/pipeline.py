@@ -56,8 +56,10 @@ def run_ingestion():
 
             con.register("valid_df", valid)
             con.execute(f"CREATE TABLE IF NOT EXISTS {BRONZE_TABLE} AS SELECT * FROM valid_df LIMIT 0")
+            con.execute(f"DELETE FROM {BRONZE_TABLE} WHERE _source_file = ?", [path.name])
             con.execute(f"INSERT INTO {BRONZE_TABLE} SELECT * FROM valid_df")
             con.unregister("valid_df")
+
 
             logger.info("Loaded %s row(s) from %s into %s", len(valid), path.name, BRONZE_TABLE)
             total_loaded += len(valid)

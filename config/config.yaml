@@ -60,6 +60,7 @@ data_quality:
   high_risk_credit_scores:
     - "<580"
     - "580-619"
+  max_rejected_rate: 0.15
 
 bands:
   income:

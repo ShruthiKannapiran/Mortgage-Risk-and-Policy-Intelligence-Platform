@@ -10,7 +10,7 @@ from src.common.logging_setup import get_logger
 logger = get_logger("database.schema_setup")
 
 DDL_DIR = Path(__file__).resolve().parents[2] / "sql" / "ddl"
-DDL_FILES = ["01_dimensions.sql", "02_fact.sql"]
+DDL_FILES = ["01_dimensions.sql", "02_fact.sql", "03_audit.sql"]
 
 
 def run_ddl(con: duckdb.DuckDBPyConnection) -> None:

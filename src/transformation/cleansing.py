@@ -28,19 +28,10 @@ def _reject(reject_log: list[dict], application_id: str, stage: str, reason: str
 
 
 def blank_strings_to_null(df: pd.DataFrame) -> pd.DataFrame:
-    """Rule: normalize blank/whitespace-only strings to true nulls.
-
-    The CSV reader intentionally keeps a blank cell as a literal "" rather than silently
-    converting it to NaN on read, so ingestion never has to guess at intent. But by the
-    time data reaches transformation, "the value is missing" should be represented the
-    same way regardless of source — otherwise a legitimately-absent value (e.g.
-    denial_reason on an approved application) ends up as "" from one source and NaN from
-    the other, which would silently break null-based checks downstream.
-    """
     df = df.copy()
     object_cols = df.select_dtypes(include=["object", "string"]).columns
     for col in object_cols:
-        is_blank = df[col].apply(lambda v: isinstance(v, str) and v.strip() == "")
+        is_blank = df[col].notna() & (df[col].astype(str).str.strip() == "")
         if is_blank.any():
             df.loc[is_blank, col] = None
     return df
