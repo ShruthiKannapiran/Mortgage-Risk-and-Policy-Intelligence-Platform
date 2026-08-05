@@ -1,0 +1,140 @@
+[
+  {
+    "chunk_id": "credit_score_tiers::Overview",
+    "document_name": "Credit Score Tier Policy",
+    "section_title": "Overview",
+    "text": "Credit Score Tier Policy \u2014 Overview\nCredit score tiers determine pricing, required down payment, and manual-underwriting\nrequirements."
+  },
+  {
+    "chunk_id": "credit_score_tiers::Section 1: Tier Definitions",
+    "document_name": "Credit Score Tier Policy",
+    "section_title": "Section 1: Tier Definitions",
+    "text": "Credit Score Tier Policy \u2014 Section 1: Tier Definitions\n- 780+: Tier 1 \u2014 best available pricing, minimal documentation overlays.\n- 740-779: Tier 2 \u2014 standard pricing.\n- 700-739: Tier 3 \u2014 standard pricing with a 0.125% rate add-on.\n- 660-699: Tier 4 \u2014 requires manual underwriting review for conventional loans.\n- 620-659: Tier 5 \u2014 FHA/VA only; conventional declined by policy.\n- Below 620: Tier 6 \u2014 requires exception approval from the Chief Credit Officer; most\n loan types will be declined."
+  },
+  {
+    "chunk_id": "credit_score_tiers::Section 2: Manual Underwriting Triggers",
+    "document_name": "Credit Score Tier Policy",
+    "section_title": "Section 2: Manual Underwriting Triggers",
+    "text": "Credit Score Tier Policy \u2014 Section 2: Manual Underwriting Triggers\nAny credit score below 660 combined with a DTI above 40% requires manual underwriting\nregardless of loan type or automated-underwriting-system recommendation."
+  },
+  {
+    "chunk_id": "data_retention_and_compliance::Overview",
+    "document_name": "Document and Data Retention Policy",
+    "section_title": "Overview",
+    "text": "Document and Data Retention Policy \u2014 Overview\nThis document summarizes retention requirements for mortgage application records and\nsupporting documentation."
+  },
+  {
+    "chunk_id": "data_retention_and_compliance::Section 1: Retention Periods",
+    "document_name": "Document and Data Retention Policy",
+    "section_title": "Section 1: Retention Periods",
+    "text": "Document and Data Retention Policy \u2014 Section 1: Retention Periods\n- Approved loan files: retained for 7 years after loan payoff or sale, per investor and\n regulatory requirements.\n- Denied application files: retained for 25 months from the date of the adverse-action\n notice, per Regulation B.\n- Withdrawn or incomplete applications: retained for 25 months from the date of\n withdrawal or the application deadline, whichever is earlier."
+  },
+  {
+    "chunk_id": "data_retention_and_compliance::Section 2: Data Access",
+    "document_name": "Document and Data Retention Policy",
+    "section_title": "Section 2: Data Access",
+    "text": "Document and Data Retention Policy \u2014 Section 2: Data Access\nOnly authorized underwriting, compliance, and audit personnel may access unmasked\napplicant financial data. All access is logged and reviewed quarterly."
+  },
+  {
+    "chunk_id": "debt_to_income_policy::Overview",
+    "document_name": "Debt-to-Income (DTI) Ratio Policy",
+    "section_title": "Overview",
+    "text": "Debt-to-Income (DTI) Ratio Policy \u2014 Overview\nDebt-to-income ratio (DTI) is the percentage of a borrower's gross monthly income that\ngoes toward monthly debt payments, including the proposed mortgage payment."
+  },
+  {
+    "chunk_id": "debt_to_income_policy::Section 1: Standard Thresholds",
+    "document_name": "Debt-to-Income (DTI) Ratio Policy",
+    "section_title": "Section 1: Standard Thresholds",
+    "text": "Debt-to-Income (DTI) Ratio Policy \u2014 Section 1: Standard Thresholds\n- Conventional loans: maximum DTI of 45%, up to 50% with compensating factors\n (reserves >= 6 months, credit score >= 720, or a loan-to-value ratio below 75%).\n- FHA loans: maximum DTI of 43%, up to 50% with documented compensating factors.\n- VA loans: no hard DTI ceiling, but DTI above 41% requires additional residual-income\n analysis.\n- USDA loans: maximum DTI of 41%, front-end ratio capped at 29%."
+  },
+  {
+    "chunk_id": "debt_to_income_policy::Section 2: High-Risk Classification",
+    "document_name": "Debt-to-Income (DTI) Ratio Policy",
+    "section_title": "Section 2: High-Risk Classification",
+    "text": "Debt-to-Income (DTI) Ratio Policy \u2014 Section 2: High-Risk Classification\nAny application with a DTI at or above 43% is flagged internally as **high-risk** for\nportfolio-monitoring purposes, regardless of loan type, and is routed to a senior\nunderwriter for secondary review."
+  },
+  {
+    "chunk_id": "debt_to_income_policy::Section 3: Documentation Requirements",
+    "document_name": "Debt-to-Income (DTI) Ratio Policy",
+    "section_title": "Section 3: Documentation Requirements",
+    "text": "Debt-to-Income (DTI) Ratio Policy \u2014 Section 3: Documentation Requirements\nUnderwriters must recompute DTI using verified income (paystubs, W-2s, or tax returns for\nself-employed borrowers) rather than the applicant-reported figure before final approval."
+  },
+  {
+    "chunk_id": "denial_reason_definitions::Overview",
+    "document_name": "Denial Reason Definitions",
+    "section_title": "Overview",
+    "text": "Denial Reason Definitions \u2014 Overview\nThis document defines the standard denial reason codes used across all origination\nchannels, aligned to Regulation B adverse-action requirements."
+  },
+  {
+    "chunk_id": "denial_reason_definitions::Section 1: Definitions",
+    "document_name": "Denial Reason Definitions",
+    "section_title": "Section 1: Definitions",
+    "text": "Denial Reason Definitions \u2014 Section 1: Definitions\n- **Debt-to-income ratio too high**: the borrower's calculated DTI exceeds the maximum\n allowed for the loan program after underwriting review.\n- **Credit history**: derogatory items, insufficient credit history, or a credit score\n below the loan program's minimum.\n- **Collateral**: the appraised property value is insufficient to support the requested\n loan amount, or the property fails to meet program eligibility standards.\n- **Insufficient income**: verified income is insufficient or cannot be reliably\n documented to support the requested payment.\n- **Incomplete application**: required documentation was not received within the\n applicable timeframe.\n- **Unverifiable information**: information provided by the applicant could not be\n verified through standard channels.\n- **Other**: any reason not captured by the above, which must be documented in free text\n by the underwriter."
+  },
+  {
+    "chunk_id": "denial_reason_definitions::Section 2: Adverse Action Notices",
+    "document_name": "Denial Reason Definitions",
+    "section_title": "Section 2: Adverse Action Notices",
+    "text": "Denial Reason Definitions \u2014 Section 2: Adverse Action Notices\nEvery denial must generate an adverse-action notice within 30 days of a completed\napplication, citing the specific denial reason(s) recorded in the system."
+  },
+  {
+    "chunk_id": "high_risk_criteria::Overview",
+    "document_name": "High-Risk Application Criteria",
+    "section_title": "Overview",
+    "text": "High-Risk Application Criteria \u2014 Overview\nThis document defines when an application is classified as high-risk for portfolio\nmonitoring and secondary review, independent of the final approval decision."
+  },
+  {
+    "chunk_id": "high_risk_criteria::Section 1: High-Risk Triggers",
+    "document_name": "High-Risk Application Criteria",
+    "section_title": "Section 1: High-Risk Triggers",
+    "text": "High-Risk Application Criteria \u2014 Section 1: High-Risk Triggers\nAn application is classified as high-risk if **any** of the following is true:\n- Debt-to-income ratio is at or above 43%.\n- Loan-to-value ratio is at or above 95%.\n- Credit score range is below 620.\n- The loan is an adjustable-rate product combined with an LTV above 90% (where\n applicable)."
+  },
+  {
+    "chunk_id": "high_risk_criteria::Section 2: Handling",
+    "document_name": "High-Risk Application Criteria",
+    "section_title": "Section 2: Handling",
+    "text": "High-Risk Application Criteria \u2014 Section 2: Handling\nHigh-risk applications require a second underwriter sign-off and are included in the\nmonthly portfolio-risk report reviewed by the credit committee."
+  },
+  {
+    "chunk_id": "loan_to_value_policy::Overview",
+    "document_name": "Loan-to-Value (LTV) Ratio Policy",
+    "section_title": "Overview",
+    "text": "Loan-to-Value (LTV) Ratio Policy \u2014 Overview\nLoan-to-value ratio (LTV) is the loan amount divided by the appraised property value (or\npurchase price, whichever is lower)."
+  },
+  {
+    "chunk_id": "loan_to_value_policy::Section 1: Maximum LTV by Loan Type",
+    "document_name": "Loan-to-Value (LTV) Ratio Policy",
+    "section_title": "Section 1: Maximum LTV by Loan Type",
+    "text": "Loan-to-Value (LTV) Ratio Policy \u2014 Section 1: Maximum LTV by Loan Type\n- Conventional purchase: 97% LTV for first-time buyers, 95% otherwise.\n- FHA: 96.5% LTV with a minimum 580 credit score; 90% LTV for scores between 500-579.\n- VA: up to 100% LTV for eligible veterans with full entitlement.\n- USDA: up to 100% LTV in eligible rural areas."
+  },
+  {
+    "chunk_id": "loan_to_value_policy::Section 2: Private Mortgage Insurance (PMI)",
+    "document_name": "Loan-to-Value (LTV) Ratio Policy",
+    "section_title": "Section 2: Private Mortgage Insurance (PMI)",
+    "text": "Loan-to-Value (LTV) Ratio Policy \u2014 Section 2: Private Mortgage Insurance (PMI)\nConventional loans with an LTV above 80% require PMI until the LTV is reduced to 78%\nthrough scheduled amortization, or upon borrower request once at 80%."
+  },
+  {
+    "chunk_id": "loan_to_value_policy::Section 3: High-Risk Classification",
+    "document_name": "Loan-to-Value (LTV) Ratio Policy",
+    "section_title": "Section 3: High-Risk Classification",
+    "text": "Loan-to-Value (LTV) Ratio Policy \u2014 Section 3: High-Risk Classification\nApplications with an LTV at or above 95% are flagged as **high-risk** and require\nsecondary appraisal review, independent of loan type."
+  },
+  {
+    "chunk_id": "state_lending_overlays::Overview",
+    "document_name": "State-Specific Lending Overlays",
+    "section_title": "Overview",
+    "text": "State-Specific Lending Overlays \u2014 Overview\nCertain states impose additional requirements beyond federal and investor guidelines."
+  },
+  {
+    "chunk_id": "state_lending_overlays::Section 1: Notable State Overlays",
+    "document_name": "State-Specific Lending Overlays",
+    "section_title": "Section 1: Notable State Overlays",
+    "text": "State-Specific Lending Overlays \u2014 Section 1: Notable State Overlays\n- **New York**: requires a state-specific pre-closing disclosure at least 3 business\n days before closing, in addition to federal TRID timing.\n- **Texas**: home-equity (Section 50(a)(6)) loans are capped at 80% LTV regardless of\n loan program, and require a 12-day cooling-off period after application.\n- **California**: higher-cost mortgage loans are subject to additional disclosure and\n are reviewed by the compliance team before approval.\n- **Illinois**: predatory-lending database checks are mandatory for all loans in Cook\n County prior to closing."
+  },
+  {
+    "chunk_id": "state_lending_overlays::Section 2: Application",
+    "document_name": "State-Specific Lending Overlays",
+    "section_title": "Section 2: Application",
+    "text": "State-Specific Lending Overlays \u2014 Section 2: Application\nState overlays apply based on `property_state`, not the borrower's mailing address, and\nare enforced in addition to (never in place of) federal requirements."
+  }
+]
