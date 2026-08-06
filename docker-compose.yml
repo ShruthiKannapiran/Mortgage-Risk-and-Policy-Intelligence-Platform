@@ -1,0 +1,40 @@
+services:
+  pipeline:
+    build: .
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      - MORTGAGE_WAREHOUSE_PATH=data/processed/mortgage.duckdb
+    volumes:
+      - ./data:/app/data
+      - ./reports:/app/reports
+    command: >
+      sh -c "python scripts/generate_data.py &&
+             python scripts/run_pipeline.py &&
+             python scripts/build_rag_index.py"
+    profiles: ["tools"]
+
+  api:
+    build: .
+    env_file:
+      - path: .env
+        required: false
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+      - ./reports:/app/reports
+    command: uvicorn src.api.main:app --host 0.0.0.0 --port 8000
+
+  dashboard:
+    build: .
+    env_file:
+      - path: .env
+        required: false
+    ports:
+      - "8501:8501"
+    volumes:
+      - ./data:/app/data
+      - ./reports:/app/reports
+    command: streamlit run dashboard/app.py --server.address 0.0.0.0 --server.port 8501

@@ -4,6 +4,8 @@ paths:
   rejected_dir: data/rejected
   reports_dir: reports
   warehouse_file: data/processed/mortgage.duckdb
+  policy_documents_dir: data/policy_documents
+  vector_store_dir: data/vector_store
 
 ingestion:
   sources:
@@ -88,24 +90,13 @@ bands:
     - [0.90, 0.95, "90-95%"]
     - [0.95, null, "95%+"]
 
-paths:
-  raw_dir: data/raw
-  processed_dir: data/processed
-  rejected_dir: data/rejected
-  reports_dir: reports
-  warehouse_file: data/processed/mortgage.duckdb
-  policy_documents_dir: data/policy_documents
-  vector_store_dir: data/vector_store
-
-# ... (keep your existing ingestion / data_quality / bands sections unchanged) ...
-
 rag:
   embedding_model: sentence-transformers/all-MiniLM-L6-v2
   chunk_size_chars: 900
   chunk_overlap_chars: 150
   top_k: 4
   min_similarity_score: 0.55
-  
+
 api:
   title: Mortgage Risk and Policy Intelligence Platform API
   version: "1.0.0"

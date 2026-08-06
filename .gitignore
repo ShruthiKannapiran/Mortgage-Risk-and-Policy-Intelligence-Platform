@@ -2,9 +2,12 @@
 __pycache__/
 *.pyc
 .venv/
+.pytest_cache/
 
 # OS
 .DS_Store
+.vscode/
+.idea/
 
 # Environment / secrets
 .env
@@ -14,6 +17,7 @@ data/raw/*.csv
 data/raw/*.json
 data/rejected/*.csv
 data/processed/*.duckdb
+data/processed/*.duckdb.wal
 
 # But keep the small samples
 !data/samples/
